@@ -1,0 +1,105 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+ .header .burguer-img {
+   display: none;
+}
+  .header {
+   height: 100px;
+   padding-right: 2rem;
+   /* margin-top: 60px; */
+   position: relative;
+   background-color: #0a0a0a;
+}
+.header-scroll {
+   height: 100px;
+   padding-right: 2rem;
+   background-color: #0a0a0a;
+   /* margin-top: 50px; */
+}
+
+.header .menu a {
+   font-size: 1.3rem;
+   text-decoration: none;
+   color: #198754;
+}
+
+.card {
+   transition: 0.5s ease all;
+}
+
+.card:hover  {
+   transform: scale(1.01);
+}
+.card:hover .card-img .like-check {
+   display: block;
+}
+.card:hover .card-img .like-checked {
+   display: block;
+}
+
+
+ .card .card-img .like-check {
+   width: 40px;   
+   height: 40px;
+   position: absolute;
+   bottom: 30px;
+   right: 15px;
+   cursor: pointer;
+   background-image: url(../img/svg/bx-heart.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+   transition: all ease-in-out 300ms;
+   display: none;
+
+}
+
+.card .card-img .like-checked {
+   width: 40px;   
+   height: 40px;
+   position: absolute;
+   bottom: 30px;
+   right: 15px;
+   cursor: pointer;
+   background-image: url(../img/svg/bxs-heart-red.svg);
+   background-repeat: no-repeat;
+   background-position: center;
+   transition: all ease-in-out 300ms;
+   /* display: none; */
+}
+
+
+@media (max-width:960px) {
+    .header .burguer-img {
+      display: block;
+   }
+   
+      .header .menu {
+      width: 300px;
+      height: 100vh;
+      padding: 1rem;
+      position: fixed;
+      left: -300px;
+      top: 100px;
+      background-color: #141313;
+      flex-direction: column;
+      transition: all linear 300ms;
+      z-index: 999;
+    }
+       
+      .header .menu-activo {
+      width: 400px;
+      height: 100vh;
+      padding: 1rem;
+      position: fixed;
+      left: 0;
+      top: 90px;
+      background-color: #141313;
+      flex-direction: column;
+      transition: all linear 300ms;
+      z-index: 999;
+    }
+    
+}

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600&display=swap');
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Inter', sans-serif;
+}
+html::-webkit-scrollbar{
+   display: none;
+}
+.hero {
+   background-image: url(../img/svg/hero-2.svg);
+   background-size: cover;
+   background-position: center;
+   min-height: 80vh;
+
+}
+
+.hero .header .burguer-img {
+   display: none;
+}
+.hero .header {
+   height: 100px;
+   padding-right: 2rem;
+   /* margin-top: 60px; */
+   position: fixed;
+   top: 0;
+}
+.hero .header-scroll {
+   height: 100px;
+   padding-right: 2rem;
+   background-color: #161617;
+   /* margin-top: 50px; */
+}
+
+.hero .header .menu a {
+   font-size: 1.3rem;
+   text-decoration: none;
+   color: #198754;
+}
+.hero .hero-content .hero-img  {
+   height: 350px;
+   /* background-image: url(../img/hero1.png); */
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   background-position: center center;
+   animation: cambio step-end infinite 20s ;
+
+}
+.product .product-img  {
+   object-fit: cover;
+}
+.product .product-img img {
+   aspect-ratio: -1/1;
+}
+@keyframes cambio {
+   0% {
+      background-image: url(../img/hero1.png);
+   }
+   20% {
+      background-image: url(../img/hero2.png);
+   }
+   50% {
+      background-image: url(../img/hero3.png);
+   }
+   80% {
+      background-image: url(../img/hero4.png);
+   }
+   100% {
+      background-image: url(../img/hero1.png);
+   }
+}
+
+.parallax {
+   background: linear-gradient(#000000cb,#000000d3), url(../img/parallax.jpg);
+   background-size: cover;
+   background-attachment: fixed;
+   height: 400px;
+}
+.row .ordenes {
+   width: 120px;
+   position: fixed;
+   bottom: 20px;
+   right: 30px;
+}
+
+@media (max-width:960px) {
+   * {
+      font-size: 1.1rem;
+   }
+   .hero .header .burguer-img {
+      display: block;
+   }
+   
+    .hero .row .header .menu {
+      width: 300px;
+      height: 100vh;
+      padding: 1rem;
+      position: fixed;
+      left: -300px;
+      top: 100px;
+      background-color: #141313;
+      flex-direction: column;
+      transition: all linear 300ms;
+    }
+       
+    .hero .row .header .menu-activo {
+      width: 400px;
+      height: 100vh;
+      padding: 1rem;
+      position: fixed;
+      left: 0;
+      top: 90px;
+      background-color: #141313;
+      flex-direction: column;
+      transition: all linear 300ms;
+    }
+    .hero .hero-content .hero-img  {
+      width: 95%;
+      height: 350px;
+      overflow: hidden;
+      
+   
+   
+   }
+    
+}
